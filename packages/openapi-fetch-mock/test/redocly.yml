@@ -1,0 +1,10 @@
+# Note: add more schemas here!
+apis:
+  methods-and-paths:
+    root: ./methodsAndPaths/schemas/schema.yml
+    x-openapi-ts:
+      output: ./methodsAndPaths/schemas/schema.d.ts
+  pathParameters:
+    root: ./pathParameters/schemas/schema.yml
+    x-openapi-ts:
+      output: ./pathParameters/schemas/schema.d.ts

@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: openapi-fetch-mock
+  version: "1.0"
+paths:
+  /string-path-params/{string}:
+    parameters:
+      - name: string
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string
+  /object-path-params/{object}:
+    parameters:
+      - name: object
+        in: path
+        required: true
+        schema:
+          type: object
+          required: [foo, bar]
+
+          properties:
+            foo:
+              type: string
+            bar:
+              type: number
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string
+  /no-path-params:
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string

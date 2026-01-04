@@ -1,0 +1,8 @@
+.turbo
+*.config.*
+examples
+test
+test-results
+tsconfig*.json
+vitest.config.ts
+biome.json

@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: openapi-fetch-mock
+  version: "1.0"
+paths:
+  /get/:
+    get:
+      responses:
+        204:
+          description: No Content
+  /post/:
+    post:
+      responses:
+        204:
+          description: No Content
+  /put/:
+    put:
+      responses:
+        204:
+          description: No Content
+  /delete/:
+    delete:
+      responses:
+        204:
+          description: No Content
+  /options/:
+    options:
+      responses:
+        204:
+          description: No Content
+  /head/:
+    head:
+      responses:
+        204:
+          description: No Content
+  /patch/:
+    patch:
+      responses:
+        204:
+          description: No Content
+  /trace/:
+    trace:
+      responses:
+        204:
+          description: No Content
