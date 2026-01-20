@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: openapi-fetch-mock
+  version: "1.0"
+paths:
+  /header-parameter:
+    parameters:
+      - name: paramA
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: paramB
+        in: header
+        required: true
+        schema:
+          type: string
+      - name: paramC
+        in: header
+        required: false
+        schema:
+          type: string
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string
+  /object-header-params:
+    parameters:
+      - name: object
+        in: header
+        required: true
+        schema:
+          type: object
+          required: [foo, bar]
+          properties:
+            foo:
+              type: string
+            bar:
+              type: number
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string
+  /no-header-params:
+    get:
+      responses:
+        200:
+          description: No Content
+          content:
+            application/json:
+              schema:
+                type: string

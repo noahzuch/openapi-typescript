@@ -8,3 +8,15 @@ apis:
     root: ./pathParameters/schemas/schema.yml
     x-openapi-ts:
       output: ./pathParameters/schemas/schema.d.ts
+  queryParameters:
+    root: ./queryParameters/schemas/schema.yml
+    x-openapi-ts:
+      output: ./queryParameters/schemas/schema.d.ts
+  headerParameters:
+    root: ./headerParameters/schemas/schema.yml
+    x-openapi-ts:
+      output: ./headerParameters/schemas/schema.d.ts
+  cookieParameters:
+    root: ./cookieParameters/schemas/schema.yml
+    x-openapi-ts:
+      output: ./cookieParameters/schemas/schema.d.ts

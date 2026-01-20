@@ -12,6 +12,7 @@ import {
 } from "../openapiHelpers.js";
 import { FetchMockGlobalConfig } from "./FetchMock.js";
 import { PathsWithMethod, HttpMethod } from "openapi-typescript-helpers";
+import {CallLog} from "fetch-mock";
 
 // ======================================================
 // == THIS FILE IS A TYPED COPY OF fetch-mock/Route.ts ==
@@ -192,10 +193,9 @@ export type RouteResponse = RouteResponseData | RouteResponsePromise | RouteResp
  */
 export type RouteResponse<RESPONSES, STATUS extends ResponseStatuses<RESPONSES>, CONTENT_TYPE> =
   | RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>
-  | Promise<RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>>;
-// TODO Does the Response function option even make sense?
-// | ((
-//     callLog: CallLog,
-//   ) =>
-//     | RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>
-//     | Promise<RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>>)
+  | Promise<RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>>
+| ((
+    callLog: CallLog,
+  ) =>
+    | RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>
+    | Promise<RouteResponseConfig<RESPONSES, STATUS, CONTENT_TYPE>>);

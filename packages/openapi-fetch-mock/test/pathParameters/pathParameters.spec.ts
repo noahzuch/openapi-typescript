@@ -44,24 +44,10 @@ describe("openapi-fetch-mock", () => {
       ).toEqual("Response 2");
     });
 
-    it("requires string-representation when handling non-string path parameters", async () => {
+    it("string-representation when handling non-string path parameters", async () => {
       //TODO Have to think about how to handle non-string parameters!
     });
-    // tfm.route({
-    //     method: 'get',
-    //     url: '/object-path-params/{object}',
-    //     params: {
-    //         object: 'foo="123",bar=456'
-    //     },
-    //     response: {
-    //         status: 200,
-    //         body: '"Response"'
-    //     }
-    // })
-    //
-    // const response = await client.GET('/object-path-params/{object}', {params: {path: {object: {foo: "123", bar: 456}}}})
-    //
-    // }
+
 
     it("prevents defining invalid params properties", () => {
       //@ts-expect-error as no 'params' property is provided, but is required for the defined operation
